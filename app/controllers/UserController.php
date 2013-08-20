@@ -36,9 +36,9 @@ class UserController extends BaseController {
                 'email' => $email,
             ),
             array(
-                'username' => 'required|min:5',
+                'username' => 'required|min:5|unique:users',
                 'password' => 'required|min:6|confirmed',
-                'email' => 'email',
+                'email' => 'email|unique:users',
             )
         );
         // Test validation
@@ -48,7 +48,7 @@ class UserController extends BaseController {
             $user->password = Hash::make($password);
             $user->email = $email;
             $user->save();
-            return Redirect::to('login');
+            return Redirect::to('login')->with('message', 'Successfully registered!');
         }else{
             return Redirect::to('register')->withErrors($validator);
         }

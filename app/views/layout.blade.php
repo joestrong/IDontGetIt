@@ -14,6 +14,10 @@
         </ul>
     </div>
     <div class="container">
+        {{ $errors->first() }}
+        @if( Session::has('message') )
+            {{ $message }}
+        @endif
         @yield('content')
     </div>
 </body>
