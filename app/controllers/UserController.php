@@ -6,12 +6,12 @@ class UserController extends BaseController {
 
     public function getLogin()
     {
-        Return View::make('loginform');
+        Return View::make('users.loginform');
     }
 
     public function getRegister()
     {
-        Return View::make('registerform');
+        Return View::make('users.registerform');
     }
 
     public function getLogout()
