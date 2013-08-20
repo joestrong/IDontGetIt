@@ -13,4 +13,8 @@
 
 Route::get('/', 'IndexController@getIndex');
 
-Route::controller('users', 'UserController');
+Route::get('login', 'UserController@getLogin');
+Route::post('login', 'UserController@postLogin');
+
+Route::get('register', 'UserController@getRegister');
+Route::post('register', 'UserController@postRegister');

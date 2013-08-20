@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    {{ Form::open(array('action' => 'UserController@register', 'method' => 'post')) }}
+    {{ Form::open(array('action' => 'UserController@postRegister', 'method' => 'post')) }}
         {{ Form::label('username', 'Username') }}
         {{ Form::text('username') }}
         {{ Form::label('password', 'Password') }}

@@ -16,13 +16,13 @@ class UserController extends BaseController {
 
     public function postLogin()
     {
-        Return '';
+        Return 'logged in';
     }
 
     public function postRegister()
     {
-        //$input = Input::all();
-        //print_r($input);
+        $input = Input::all();
+        print_r($input);
     }
 
 }
