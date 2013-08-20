@@ -16,7 +16,7 @@ class CreateJokesTable extends Migration {
             $table->increments('id');
             $table->string('joke');
             $table->string('explanation');
-            $table->int('user_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
 	}

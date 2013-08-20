@@ -54,10 +54,11 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
+            'unix_socket'   => '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
 			'host'      => 'localhost',
 			'database'  => 'idontgetit',
 			'username'  => 'idontgetit',
-			'password'  => 'hxFWWjNy3xAXXvPv',
+			'password'  => '6ywuYKdpnVUsDzVt',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
