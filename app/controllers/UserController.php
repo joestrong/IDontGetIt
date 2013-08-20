@@ -16,7 +16,15 @@ class UserController extends BaseController {
 
     public function postLogin()
     {
-        Return 'logged in';
+        $input = Input::all();
+        $username = $input['username'];
+        $password = $input['password'];
+        if (Auth::attempt(array('username' => $username, 'password' => $password)))
+        {
+            return Redirect::intended('/');
+        }else{
+            return Redirect::to('login')->withErrors('Incorrect login details');
+        }
     }
 
     public function postRegister()
