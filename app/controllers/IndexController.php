@@ -4,7 +4,8 @@ class IndexController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('index');
+        $jokes = Joke::all();
+		return View::make('index')->with('jokes', $jokes);
 	}
 
 }

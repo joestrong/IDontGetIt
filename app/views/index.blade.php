@@ -1,5 +1,7 @@
 @extends('layout')
 
 @section('content')
-    Index page!
+    @foreach($jokes as $joke)
+        <p>{{ $joke->joke }}</p>
+    @endforeach
 @stop
