@@ -2,6 +2,10 @@
 
 @section('content')
     @foreach($jokes as $joke)
-        <p>{{ $joke->joke }}</p>
+        <div class="joke">
+            <div class="joke-text">{{ $joke->joke }}</div>
+            <div class="joke-explanation">{{ $joke->explanation }}</div>
+            <div class="joke-user">{{ $joke->user_id }}</div>
+        </div>
     @endforeach
 @stop

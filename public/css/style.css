@@ -1,0 +1,23 @@
+body {
+  background: #aaa; }
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 15px;
+  background: #fff;
+  padding: 25px; }
+
+.joke .joke-text {
+  font-style: bold;
+  color: #333; }
+
+.joke .joke-explanation {
+  padding-left: 40px;
+  font-style: italic;
+  color: #777; }
+
+.joke .joke-user {
+  text-align: right;
+  font-size: 80%;
+  text-transform: uppercase; }
