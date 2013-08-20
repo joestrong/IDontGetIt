@@ -14,6 +14,12 @@ class UserController extends BaseController {
         Return View::make('registerform');
     }
 
+    public function getLogout()
+    {
+        Auth::logout();
+        Return Redirect::to('login')->with('message', 'Successfully logged out!');
+    }
+
     public function postLogin()
     {
         $input = Input::all();
