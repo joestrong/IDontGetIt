@@ -21,8 +21,37 @@ class UserController extends BaseController {
 
     public function postRegister()
     {
+        // Get form field input
         $input = Input::all();
-        print_r($input);
+        $username = $input['username'];
+        $email = $input['email'];
+        $password = $input['password'];
+        $password2 = $input['password2'];
+        // Set up validation
+        $validator = Validator::make(
+            array(
+                'username' => $username,
+                'password' => $password,
+                'password_confirmation' => $password2,
+                'email' => $email,
+            ),
+            array(
+                'username' => 'required|min:5',
+                'password' => 'required|min:6|confirmed',
+                'email' => 'email',
+            )
+        );
+        // Test validation
+        if($validator->passes()){
+            $user = new User;
+            $user->username = $username;
+            $user->password = Hash::make($password);
+            $user->email = $email;
+            $user->save();
+            return Redirect::to('login');
+        }else{
+            return Redirect::to('register')->withErrors($validator);
+        }
     }
 
 }
