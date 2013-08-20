@@ -20,3 +20,6 @@ Route::get('logout', 'UserController@getLogout');
 
 Route::get('register', 'UserController@getRegister');
 Route::post('register', 'UserController@postRegister');
+
+Route::get('jokes/create', 'JokeController@getCreate');
+Route::post('jokes/create', 'JokeController@postCreate');

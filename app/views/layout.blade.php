@@ -9,6 +9,7 @@
     <div class="top-nav">
         <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/jokes/create">Add joke</a></li>
             @if(Auth::check())
                 <li><a href="/logout">Log out {{ Auth::user()->username }}</a></li>
             @else
