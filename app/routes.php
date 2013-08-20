@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'IndexController@getIndex');
+
+Route::controller('users', 'UserController');
