@@ -13,13 +13,7 @@
 
 Route::get('/', 'IndexController@getIndex');
 
-Route::get('login', 'UserController@getLogin');
-Route::post('login', 'UserController@postLogin');
-
-Route::get('logout', 'UserController@getLogout');
-
-Route::get('register', 'UserController@getRegister');
-Route::post('register', 'UserController@postRegister');
+Route::controller('users', 'UserController');
 
 Route::get('jokes/create', array('before' => 'auth', 'uses' => 'JokeController@getCreate'));
 Route::post('jokes/create', array('before' => 'auth', 'uses' => 'JokeController@postCreate'));

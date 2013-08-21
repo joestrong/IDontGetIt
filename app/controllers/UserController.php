@@ -17,7 +17,7 @@ class UserController extends BaseController {
     public function getLogout()
     {
         Auth::logout();
-        Return Redirect::to('login')->with('message', 'Successfully logged out!');
+        Return Redirect::to('users/login')->with('message', 'Successfully logged out!');
     }
 
     public function postLogin()
@@ -29,7 +29,7 @@ class UserController extends BaseController {
         {
             return Redirect::intended('/');
         }else{
-            return Redirect::to('login')->withErrors('Incorrect login details');
+            return Redirect::to('users/login')->withErrors('Incorrect login details');
         }
     }
 
@@ -62,9 +62,9 @@ class UserController extends BaseController {
             $user->password = Hash::make($password);
             $user->email = $email;
             $user->save();
-            return Redirect::to('login')->with('message', 'Successfully registered!');
+            return Redirect::to('users/login')->with('message', 'Successfully registered!');
         }else{
-            return Redirect::to('register')->withErrors($validator);
+            return Redirect::to('users/register')->withErrors($validator);
         }
     }
 

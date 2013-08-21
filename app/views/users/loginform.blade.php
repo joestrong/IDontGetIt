@@ -8,5 +8,5 @@
         {{ Form::password('password') }}
         {{ Form::submit('Login') }}
     {{ Form::close() }}
-    <a href="/register">Sign up</a>
+    <a href="/users/register">Sign up</a>
 @stop

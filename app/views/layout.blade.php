@@ -11,10 +11,10 @@
             <li><a href="/">Home</a></li>
             <li><a href="/jokes/create">Add joke</a></li>
             @if(Auth::check())
-                <li><a href="/logout">Log out {{ Auth::user()->username }}</a></li>
+                <li><a href="/users/logout">Log out {{ Auth::user()->username }}</a></li>
             @else
-                <li><a href="/login">Log in</a></li>
-                <li><a href="/register">Register</a></li>
+                <li><a href="/users/login">Log in</a></li>
+                <li><a href="/users/register">Register</a></li>
             @endif
         </ul>
     </div>
