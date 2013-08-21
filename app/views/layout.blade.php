@@ -14,8 +14,8 @@
                 <li><a href="/logout">Log out {{ Auth::user()->username }}</a></li>
             @else
                 <li><a href="/login">Log in</a></li>
+                <li><a href="/register">Register</a></li>
             @endif
-            <li><a href="/register">Register</a></li>
         </ul>
     </div>
     <div class="container">
