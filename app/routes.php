@@ -21,5 +21,5 @@ Route::get('logout', 'UserController@getLogout');
 Route::get('register', 'UserController@getRegister');
 Route::post('register', 'UserController@postRegister');
 
-Route::get('jokes/create', 'JokeController@getCreate');
-Route::post('jokes/create', 'JokeController@postCreate');
+Route::get('jokes/create', array('before' => 'auth', 'uses' => 'JokeController@getCreate'));
+Route::post('jokes/create', array('before' => 'auth', 'uses' => 'JokeController@postCreate'));
