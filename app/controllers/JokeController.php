@@ -2,6 +2,11 @@
 
 class JokeController extends BaseController{
 
+    public function __construct()
+    {
+        $this->beforeFilter('auth');
+    }
+
     public function getCreate()
     {
         return View::make('jokes.create');

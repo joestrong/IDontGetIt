@@ -15,5 +15,4 @@ Route::get('/', 'IndexController@getIndex');
 
 Route::controller('users', 'UserController');
 
-Route::get('jokes/create', array('before' => 'auth', 'uses' => 'JokeController@getCreate'));
-Route::post('jokes/create', array('before' => 'auth', 'uses' => 'JokeController@postCreate'));
+Route::controller('jokes', 'JokeController');
